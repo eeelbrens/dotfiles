@@ -1,0 +1,11 @@
+#!/bin/sh
+
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+
+pick=$(hyprpicker -al)
+if [[ -n $pick ]] then
+  sed -i '/\[summary\=hyprpicker\]/!b;n;s/.*/border-color='$pick'/' ~/.config/mako/config
+  makoctl reload
+  notify-send "hyprpicker" -h string:x-canonical-private-synchronous:hyprpicker "copied $pick to clipboard"
+fi

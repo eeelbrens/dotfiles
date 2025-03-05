@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# span encapsulator
+spanner() {
+  echo "<span color='$1'>$2</span>"
+}
+
+text="#cdd6f4"
+dim="#6c7086"
+
+hyprwk=$(hyprctl workspaces | grep workspace | awk '{print $3}')
+hyprwka=$(hyprctl activeworkspace | grep workspace | awk '{print $3}')
+hyprpt=""
+for i in $hyprwk; do
+  if [[ i -gt 0 ]]; then
+    if [[ i -eq $hyprwka ]]; then hyprpt+=$(spanner $text "# ")
+    else hyprpt+=$(spanner $dim "# "); fi
+  fi
+done
+
+echo $hyprpt

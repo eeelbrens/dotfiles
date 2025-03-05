@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Original Script from:
+# https://www.claudiokuenzler.com/blog/278/php-shell-bash-script-calculate-percentage-of-current-year-passed
+
+FIRST=$(date --date="$(date +%Y)-01-01 00:00:00" +%s)
+LAST=$(date --date="$(date +%Y)-12-31 23:59:59" +%s)
+NOW=$(date +%s)
+
+# Calculate how many seconds alone this whole year
+RESYEAR=$(($LAST - $FIRST))
+
+# Calculate how many seconds this year so far
+RESNOW=$((100 * $NOW - 100 * $FIRST))
+
+# Calculate percentage
+printf "%04.1f\n" $(bc <<< "scale=1; $RESNOW/$RESYEAR")
