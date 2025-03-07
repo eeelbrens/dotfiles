@@ -3,14 +3,19 @@ personal **barless** daily-driver dotfiles based on [`hyprland`](https://hyprlan
 > barless setup is achieved using a manually toggleable [`mako`](https://github.com/emersion/mako)-enabled summary notification, alongside other bind (hypr keybinds) toggleable notifications. previews are below for the different functions the scripts and binds could provide
 
 ## previews
-### video
 
-https://github.com/user-attachments/assets/81408b9b-da0c-4f00-9b25-48e4131bf957
+> additional video file is available if you click any of the images/gifs below (or [here](assets/v1.mp4))
 
 ### screenshots
 
-![s1](assets/s1.png)
-![s2](assets/s2.png)
+[![s1](assets/s1.png)](assets/v1.mp4)
+[![s2](assets/s2.png)](assets/v1.mp4)
+
+### gifs
+
+| [![g2](assets/g2.gif)](assets/v1.mp4) | [![g1](assets/g1.gif)](assets/v1.mp4) | [![g3](assets/g3.gif)](assets/v1.mp4) |
+| :---: | :---: | :---: |
+| summary w/ media playing and workspace switching | audio and brightness progress bars | color picker (`hyprpicker`) and idle inhibitor |
 
 ---
 
@@ -31,6 +36,6 @@ https://github.com/user-attachments/assets/81408b9b-da0c-4f00-9b25-48e4131bf957
 - animation: [`lavat`](https://github.com/AngelJumbo/lavat)
 
 ### theming stuff and miscellaneous
-- theme: [Catppuccin](https://github.com/catppuccin/catppuccin)
+- theme: [Catppuccin](https://github.com/catppuccin/catppuccin) Mocha Mauve
 - wallpaper: [pixiv link](https://www.pixiv.net/en/artworks/95800226)
-- font: [Fira Code](https://github.com/tonsky/FiraCode)
+- font: [Fira Code](https://github.com/tonsky/FiraCode) (set through monospace alias (fontconfig), bring your own font!)
