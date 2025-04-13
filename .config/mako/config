@@ -1,0 +1,53 @@
+sort=-time
+sort=+priority
+layer=overlay
+background-color=#1e1e2e
+width=300
+height=300
+outer-margin=12,3
+padding=9,6
+border-size=3
+text-color=#cdd6f4
+border-color=#cdd6f4
+progress-color=over #cba6f7
+border-radius=20
+icons=0
+anchor=bottom-right
+default-timeout=12000
+ignore-timeout=1
+font=monospace 14
+[urgency=high]
+border-color=#f38ba8
+default-timeout=0
+
+[summary~=hourly\ clock]
+default-timeout=24000
+
+# bin/color-picker (last color picked is hardcoded in config)
+[summary=hyprpicker]
+border-color=#18864b
+
+# .config/hypr/hyprland.conf && bin/workspaces
+[summary=volume]
+width=210
+text-alignment=center
+[summary=mic]
+width=210
+text-alignment=center
+[summary=brightness]
+width=210
+text-alignment=center
+
+# bin/battery-alert
+[summary="battery charged"]
+border-color=#a6e3a1
+[summary="battery low"]
+border-color=#fab387
+[summary="battery critical"]
+border-color=#f38ba8
+
+# bin/battery-charging
+[summary="charging"]
+border-color=#a6e3a1
+[summary="discharging"]
+border-color=#a6e3a1

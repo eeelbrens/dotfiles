@@ -1,0 +1,637 @@
+@import "color.css";
+
+* {
+    font-family: monospace, 'Fira Code Nerd Font';
+    font-size: 18px;
+}
+
+window#waybar {
+    background-color: @base;
+    border: 3px solid @text;
+    border-radius: 21px;
+}
+
+.modules-right {
+    padding-top:    15px;
+    padding-bottom: 15px;
+}
+
+.modules-left {
+    padding-top:    15px;
+    padding-bottom: 15px;
+}
+
+.modules-center {
+    background-color: transparent;
+    font-style: italic;
+}
+
+.modules-center #custom-mediaprogress {
+    border: solid @text;
+    border-width: 0 3px 0 3px;
+    padding-left:   12px;
+    padding-right:  12px;
+    padding-top:    12px;
+    padding-bottom: 12px;
+}
+
+/* start of progress bar hack (+402 lines for end)*/
+
+.modules-center #custom-mediaprogress.0 {
+    background-image: linear-gradient(to top, @mauve 0%, @base 0.1%);
+}
+
+.modules-center #custom-mediaprogress.1 {
+    background-image: linear-gradient(to top, @mauve 1%, @base 1.1%);
+}
+
+.modules-center #custom-mediaprogress.2 {
+    background-image: linear-gradient(to top, @mauve 2%, @base 2.1%);
+}
+
+.modules-center #custom-mediaprogress.3 {
+    background-image: linear-gradient(to top, @mauve 3%, @base 3.1%);
+}
+
+.modules-center #custom-mediaprogress.4 {
+    background-image: linear-gradient(to top, @mauve 4%, @base 4.1%);
+}
+
+.modules-center #custom-mediaprogress.5 {
+    background-image: linear-gradient(to top, @mauve 5%, @base 5.1%);
+}
+
+.modules-center #custom-mediaprogress.6 {
+    background-image: linear-gradient(to top, @mauve 6%, @base 6.1%);
+}
+
+.modules-center #custom-mediaprogress.7 {
+    background-image: linear-gradient(to top, @mauve 7%, @base 7.1%);
+}
+
+.modules-center #custom-mediaprogress.8 {
+    background-image: linear-gradient(to top, @mauve 8%, @base 8.1%);
+}
+
+.modules-center #custom-mediaprogress.9 {
+    background-image: linear-gradient(to top, @mauve 9%, @base 9.1%);
+}
+
+.modules-center #custom-mediaprogress.10 {
+    background-image: linear-gradient(to top, @mauve 10%, @base 10.1%);
+}
+
+.modules-center #custom-mediaprogress.11 {
+    background-image: linear-gradient(to top, @mauve 11%, @base 11.1%);
+}
+
+.modules-center #custom-mediaprogress.12 {
+    background-image: linear-gradient(to top, @mauve 12%, @base 12.1%);
+}
+
+.modules-center #custom-mediaprogress.13 {
+    background-image: linear-gradient(to top, @mauve 13%, @base 13.1%);
+}
+
+.modules-center #custom-mediaprogress.14 {
+    background-image: linear-gradient(to top, @mauve 14%, @base 14.1%);
+}
+
+.modules-center #custom-mediaprogress.15 {
+    background-image: linear-gradient(to top, @mauve 15%, @base 15.1%);
+}
+
+.modules-center #custom-mediaprogress.16 {
+    background-image: linear-gradient(to top, @mauve 16%, @base 16.1%);
+}
+
+.modules-center #custom-mediaprogress.17 {
+    background-image: linear-gradient(to top, @mauve 17%, @base 17.1%);
+}
+
+.modules-center #custom-mediaprogress.18 {
+    background-image: linear-gradient(to top, @mauve 18%, @base 18.1%);
+}
+
+.modules-center #custom-mediaprogress.19 {
+    background-image: linear-gradient(to top, @mauve 19%, @base 19.1%);
+}
+
+.modules-center #custom-mediaprogress.20 {
+    background-image: linear-gradient(to top, @mauve 20%, @base 20.1%);
+}
+
+.modules-center #custom-mediaprogress.21 {
+    background-image: linear-gradient(to top, @mauve 21%, @base 21.1%);
+}
+
+.modules-center #custom-mediaprogress.22 {
+    background-image: linear-gradient(to top, @mauve 22%, @base 22.1%);
+}
+
+.modules-center #custom-mediaprogress.23 {
+    background-image: linear-gradient(to top, @mauve 23%, @base 23.1%);
+}
+
+.modules-center #custom-mediaprogress.24 {
+    background-image: linear-gradient(to top, @mauve 24%, @base 24.1%);
+}
+
+.modules-center #custom-mediaprogress.25 {
+    background-image: linear-gradient(to top, @mauve 25%, @base 25.1%);
+}
+
+.modules-center #custom-mediaprogress.26 {
+    background-image: linear-gradient(to top, @mauve 26%, @base 26.1%);
+}
+
+.modules-center #custom-mediaprogress.27 {
+    background-image: linear-gradient(to top, @mauve 27%, @base 27.1%);
+}
+
+.modules-center #custom-mediaprogress.28 {
+    background-image: linear-gradient(to top, @mauve 28%, @base 28.1%);
+}
+
+.modules-center #custom-mediaprogress.29 {
+    background-image: linear-gradient(to top, @mauve 29%, @base 29.1%);
+}
+
+.modules-center #custom-mediaprogress.30 {
+    background-image: linear-gradient(to top, @mauve 30%, @base 30.1%);
+}
+
+.modules-center #custom-mediaprogress.31 {
+    background-image: linear-gradient(to top, @mauve 31%, @base 31.1%);
+}
+
+.modules-center #custom-mediaprogress.32 {
+    background-image: linear-gradient(to top, @mauve 32%, @base 32.1%);
+}
+
+.modules-center #custom-mediaprogress.33 {
+    background-image: linear-gradient(to top, @mauve 33%, @base 33.1%);
+}
+
+.modules-center #custom-mediaprogress.34 {
+    background-image: linear-gradient(to top, @mauve 34%, @base 34.1%);
+}
+
+.modules-center #custom-mediaprogress.35 {
+    background-image: linear-gradient(to top, @mauve 35%, @base 35.1%);
+}
+
+.modules-center #custom-mediaprogress.36 {
+    background-image: linear-gradient(to top, @mauve 36%, @base 36.1%);
+}
+
+.modules-center #custom-mediaprogress.37 {
+    background-image: linear-gradient(to top, @mauve 37%, @base 37.1%);
+}
+
+.modules-center #custom-mediaprogress.38 {
+    background-image: linear-gradient(to top, @mauve 38%, @base 38.1%);
+}
+
+.modules-center #custom-mediaprogress.39 {
+    background-image: linear-gradient(to top, @mauve 39%, @base 39.1%);
+}
+
+.modules-center #custom-mediaprogress.40 {
+    background-image: linear-gradient(to top, @mauve 40%, @base 40.1%);
+}
+
+.modules-center #custom-mediaprogress.41 {
+    background-image: linear-gradient(to top, @mauve 41%, @base 41.1%);
+}
+
+.modules-center #custom-mediaprogress.42 {
+    background-image: linear-gradient(to top, @mauve 42%, @base 42.1%);
+}
+
+.modules-center #custom-mediaprogress.43 {
+    background-image: linear-gradient(to top, @mauve 43%, @base 43.1%);
+}
+
+.modules-center #custom-mediaprogress.44 {
+    background-image: linear-gradient(to top, @mauve 44%, @base 44.1%);
+}
+
+.modules-center #custom-mediaprogress.45 {
+    background-image: linear-gradient(to top, @mauve 45%, @base 45.1%);
+}
+
+.modules-center #custom-mediaprogress.46 {
+    background-image: linear-gradient(to top, @mauve 46%, @base 46.1%);
+}
+
+.modules-center #custom-mediaprogress.47 {
+    background-image: linear-gradient(to top, @mauve 47%, @base 47.1%);
+}
+
+.modules-center #custom-mediaprogress.48 {
+    background-image: linear-gradient(to top, @mauve 48%, @base 48.1%);
+}
+
+.modules-center #custom-mediaprogress.49 {
+    background-image: linear-gradient(to top, @mauve 49%, @base 49.1%);
+}
+
+.modules-center #custom-mediaprogress.50 {
+    background-image: linear-gradient(to top, @mauve 50%, @base 50.1%);
+}
+
+.modules-center #custom-mediaprogress.51 {
+    background-image: linear-gradient(to top, @mauve 51%, @base 51.1%);
+}
+
+.modules-center #custom-mediaprogress.52 {
+    background-image: linear-gradient(to top, @mauve 52%, @base 52.1%);
+}
+
+.modules-center #custom-mediaprogress.53 {
+    background-image: linear-gradient(to top, @mauve 53%, @base 53.1%);
+}
+
+.modules-center #custom-mediaprogress.54 {
+    background-image: linear-gradient(to top, @mauve 54%, @base 54.1%);
+}
+
+.modules-center #custom-mediaprogress.55 {
+    background-image: linear-gradient(to top, @mauve 55%, @base 55.1%);
+}
+
+.modules-center #custom-mediaprogress.56 {
+    background-image: linear-gradient(to top, @mauve 56%, @base 56.1%);
+}
+
+.modules-center #custom-mediaprogress.57 {
+    background-image: linear-gradient(to top, @mauve 57%, @base 57.1%);
+}
+
+.modules-center #custom-mediaprogress.58 {
+    background-image: linear-gradient(to top, @mauve 58%, @base 58.1%);
+}
+
+.modules-center #custom-mediaprogress.59 {
+    background-image: linear-gradient(to top, @mauve 59%, @base 59.1%);
+}
+
+.modules-center #custom-mediaprogress.60 {
+    background-image: linear-gradient(to top, @mauve 60%, @base 60.1%);
+}
+
+.modules-center #custom-mediaprogress.61 {
+    background-image: linear-gradient(to top, @mauve 61%, @base 61.1%);
+}
+
+.modules-center #custom-mediaprogress.62 {
+    background-image: linear-gradient(to top, @mauve 62%, @base 62.1%);
+}
+
+.modules-center #custom-mediaprogress.63 {
+    background-image: linear-gradient(to top, @mauve 63%, @base 63.1%);
+}
+
+.modules-center #custom-mediaprogress.64 {
+    background-image: linear-gradient(to top, @mauve 64%, @base 64.1%);
+}
+
+.modules-center #custom-mediaprogress.65 {
+    background-image: linear-gradient(to top, @mauve 65%, @base 65.1%);
+}
+
+.modules-center #custom-mediaprogress.66 {
+    background-image: linear-gradient(to top, @mauve 66%, @base 66.1%);
+}
+
+.modules-center #custom-mediaprogress.67 {
+    background-image: linear-gradient(to top, @mauve 67%, @base 67.1%);
+}
+
+.modules-center #custom-mediaprogress.68 {
+    background-image: linear-gradient(to top, @mauve 68%, @base 68.1%);
+}
+
+.modules-center #custom-mediaprogress.69 {
+    background-image: linear-gradient(to top, @mauve 69%, @base 69.1%);
+}
+
+.modules-center #custom-mediaprogress.70 {
+    background-image: linear-gradient(to top, @mauve 70%, @base 70.1%);
+}
+
+.modules-center #custom-mediaprogress.71 {
+    background-image: linear-gradient(to top, @mauve 71%, @base 71.1%);
+}
+
+.modules-center #custom-mediaprogress.72 {
+    background-image: linear-gradient(to top, @mauve 72%, @base 72.1%);
+}
+
+.modules-center #custom-mediaprogress.73 {
+    background-image: linear-gradient(to top, @mauve 73%, @base 73.1%);
+}
+
+.modules-center #custom-mediaprogress.74 {
+    background-image: linear-gradient(to top, @mauve 74%, @base 74.1%);
+}
+
+.modules-center #custom-mediaprogress.75 {
+    background-image: linear-gradient(to top, @mauve 75%, @base 75.1%);
+}
+
+.modules-center #custom-mediaprogress.76 {
+    background-image: linear-gradient(to top, @mauve 76%, @base 76.1%);
+}
+
+.modules-center #custom-mediaprogress.77 {
+    background-image: linear-gradient(to top, @mauve 77%, @base 77.1%);
+}
+
+.modules-center #custom-mediaprogress.78 {
+    background-image: linear-gradient(to top, @mauve 78%, @base 78.1%);
+}
+
+.modules-center #custom-mediaprogress.79 {
+    background-image: linear-gradient(to top, @mauve 79%, @base 79.1%);
+}
+
+.modules-center #custom-mediaprogress.80 {
+    background-image: linear-gradient(to top, @mauve 80%, @base 80.1%);
+}
+
+.modules-center #custom-mediaprogress.81 {
+    background-image: linear-gradient(to top, @mauve 81%, @base 81.1%);
+}
+
+.modules-center #custom-mediaprogress.82 {
+    background-image: linear-gradient(to top, @mauve 82%, @base 82.1%);
+}
+
+.modules-center #custom-mediaprogress.83 {
+    background-image: linear-gradient(to top, @mauve 83%, @base 83.1%);
+}
+
+.modules-center #custom-mediaprogress.84 {
+    background-image: linear-gradient(to top, @mauve 84%, @base 84.1%);
+}
+
+.modules-center #custom-mediaprogress.85 {
+    background-image: linear-gradient(to top, @mauve 85%, @base 85.1%);
+}
+
+.modules-center #custom-mediaprogress.86 {
+    background-image: linear-gradient(to top, @mauve 86%, @base 86.1%);
+}
+
+.modules-center #custom-mediaprogress.87 {
+    background-image: linear-gradient(to top, @mauve 87%, @base 87.1%);
+}
+
+.modules-center #custom-mediaprogress.88 {
+    background-image: linear-gradient(to top, @mauve 88%, @base 88.1%);
+}
+
+.modules-center #custom-mediaprogress.89 {
+    background-image: linear-gradient(to top, @mauve 89%, @base 89.1%);
+}
+
+.modules-center #custom-mediaprogress.90 {
+    background-image: linear-gradient(to top, @mauve 90%, @base 90.1%);
+}
+
+.modules-center #custom-mediaprogress.91 {
+    background-image: linear-gradient(to top, @mauve 91%, @base 91.1%);
+}
+
+.modules-center #custom-mediaprogress.92 {
+    background-image: linear-gradient(to top, @mauve 92%, @base 92.1%);
+}
+
+.modules-center #custom-mediaprogress.93 {
+    background-image: linear-gradient(to top, @mauve 93%, @base 93.1%);
+}
+
+.modules-center #custom-mediaprogress.94 {
+    background-image: linear-gradient(to top, @mauve 94%, @base 94.1%);
+}
+
+.modules-center #custom-mediaprogress.95 {
+    background-image: linear-gradient(to top, @mauve 95%, @base 95.1%);
+}
+
+.modules-center #custom-mediaprogress.96 {
+    background-image: linear-gradient(to top, @mauve 96%, @base 96.1%);
+}
+
+.modules-center #custom-mediaprogress.97 {
+    background-image: linear-gradient(to top, @mauve 97%, @base 97.1%);
+}
+
+.modules-center #custom-mediaprogress.98 {
+    background-image: linear-gradient(to top, @mauve 98%, @base 98.1%);
+}
+
+.modules-center #custom-mediaprogress.99 {
+    background-image: linear-gradient(to top, @mauve 99%, @base 99.1%);
+}
+
+
+/*end of progress bar hack (-402 lines for start)*/
+
+#workspaces button {
+    padding: 2px 2px;
+    background-color: transparent;
+    color: @surface1;
+}
+
+#workspaces button.focused, #workspaces button.active {
+    color: @text;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-mediaprogress,
+#language,
+#tray,
+#keyboard-state,
+#custom-idleinhibit,
+#scratchpad,
+#power-profiles-daemon,
+#mpris,
+#custom-yearp {
+    color: @text;
+}
+
+#mode, #submap {
+    color: @mauve;
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @peach;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+}
+
+#power-profiles-daemon {
+}
+
+#power-profiles-daemon.performance {
+    color: @red;
+    border: 2px solid @red;
+}
+
+#power-profiles-daemon.balanced {
+    color: @text;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @green;
+}
+
+label:focus {
+    background-color: @surface1;
+}
+
+#cpu {
+    color: @text;
+}
+
+#cpu.critical {
+    color: @red;
+}
+
+#memory {
+    color: @text;
+}
+
+#memory.critical {
+    color: @red;
+}
+
+#disk {
+    color: @text;
+}
+
+#network {
+    color: @mauve;
+}
+
+#network.disconnected, #network.disabled {
+    color: @surface1;
+}
+
+#pulseaudio {
+    color: @green;
+}
+
+#pulseaudio.muted {
+    color: @surface1;
+}
+
+#wireplumber {
+    background-color: @base;
+    color: @text;
+}
+
+#wireplumber.muted {
+    color: @surface1;
+}
+
+#mpris {
+    color: @text;
+}
+
+#mpris.spotify {
+    color: @green;
+}
+
+#mpris.paused {
+    color: @surface1;
+}
+
+#temperature {
+    color: @text;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+#tray {
+    color: @blue;
+    border: 2px solid @blue;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: @red;
+    border: 2px solid @blue;
+}
+
+#idle_inhibitor {
+    color: @surface1;
+}
+
+#idle_inhibitor.activated {
+    color: @mauve;
+}
+
+#language {
+    color: @mauve;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+}
+
+#privacy-item.screenshare {
+    color: @teal;
+}
+
+#privacy-item.audio-in {
+    color: @green;
+}
+
+#privacy-item.audio-out {
+    color: @green;
+}
+
+#custom-yearprogress {
+    color: @text;
+}
+
+#custom-separator {
+    color: @surface1;
+}
+
+#custom-idleinhibit {
+    color: @mauve;
+}

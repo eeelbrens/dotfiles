@@ -1,0 +1,71 @@
+#!/bin/sh
+
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+
+# span encapsulator
+spanner() {
+  echo "<span color='$1'>$2</span>"
+}
+
+# colors
+text="#cdd6f4"
+dim="#6c7086"
+red="#f38ba8"
+orange="#f9e2af"
+green="#a6e3a1"
+blue="#89b4fa"
+purple="#cba6f7"
+
+# unified accent
+accent=$purple
+accent2=$orange
+
+# powr: (colors are catppuccin's orange, red, white, and green)
+batbc=$(cat /sys/class/power_supply/BAT0/capacity)
+batbcf=$(printf "%02d\n" "${batbc}")
+case $(cat /sys/class/power_supply/BAT0/status) in
+  Discharging)
+    if   [[ batbc -le 30 ]]; then batbt="$(spanner $orange "${batbcf}%")"
+    elif [[ batbc -le 10 ]]; then batbt="$(spanner $red "${batbcf}%")"
+    else batbt="${batbcf}%"
+    fi ;;
+  Full | Not\ charging) batbt="FULL" ;;
+  *) batbt="$(spanner $green "${batbcf}%")" ;;
+esac
+
+# mem:
+mem=$(free  | grep Mem  | awk '{printf("%02d\n", $3/$2 * 100.0)}')
+swap=$(free | grep Swap | awk '{printf("%02d\n", $3/$2 * 100.0)}')
+
+# net:
+net=$(nmcli connection show --active | grep wifi | awk '{print $1}')
+if [[ -n "$net" ]]; then
+  networking="\n$(spanner $accent "<b>net: </b>") ${net}"
+fi
+
+# play:
+case $(playerctl status) in
+  Playing | Paused)
+    playing="<i>$(playerctl -a metadata --format $'{{artist}} - {{title}}')</i>" ;;&
+  Paused)
+    playing="$(spanner $dim "${playing}")" ;;
+esac
+if [[ $playing ]]; then
+  playing="\n$(spanner $accent "<b>play:</b>") ${playing}";
+fi
+
+summary="""$(spanner $accent2 "<b>uptm:</b>") $(uptime -p |\
+  sed 's/up //g; s/ weeks\?/w/; s/ days\?/d/; s/ hours\?/h/; s/ minutes\?/m/; s/,//g; s/\b[0-9][a-z]/0&/g;')
+$(spanner $accent  "<b>powr:</b>") ${batbt}
+$(spanner $accent  "<b>mmry:</b>") $(\
+  spanner $([ $mem  -gt 80 ] && echo "$red" || echo "$text") "${mem}%" ) $(\
+  spanner $([ $swap -gt 10 ] && echo "$red" || echo "$text") "${swap}%")
+$(spanner $accent  "<b>hypr:</b>") $(~/bin/summaryhypr)
+$(spanner $accent2 "<b>time:</b>") $(date +"%H:%M")
+$(spanner $accent2 "<b>date:</b>") $(date +"%a, %b%d")
+$(spanner $accent2 "<b>year:</b>") "$(~/bin/yearprogress)"% ${networking} ${playing}
+"""
+
+notify-send -u critical -h string:x-canonical-private-synchronous:summary \
+  "summary $(if [[ -n $(pidof systemd-inhibit) ]]; then echo "(awake!)"; fi)" "$summary"

@@ -1,0 +1,164 @@
+// -*- mode: jsonc -*-
+[
+    {
+        "id": "0",
+        "position": "right",
+        "height": 1056,
+        "width": 60,
+        "margin-right": 12,
+        "modules-left": [
+            "custom/yearp",
+            "custom/separator",
+            "network",
+            "custom/separator",
+            "group/systeminfo",
+            "custom/separator",
+            "hyprland/workspaces",
+            "hyprland/submap",
+            "custom/idleinhibit",
+        ],
+        "modules-center": [
+            "custom/mediaprogress",
+        ],
+        "modules-right": [
+            "hyprland/language",
+            "custom/separator",
+            "group/clock",
+            "custom/separator",
+            "clock#date",
+            "custom/separator",
+            "battery",
+        ],
+        "hyprland/submap": {
+            "format": "{} | ",
+            "rotate": 90,
+        },
+        "tray": {
+            // "icon-size": 21,
+            "spacing": 10,
+        },
+        "clock": {
+            "format": "{:%H\n%M}",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "interval": 1,
+        },
+        "clock#sec": {
+            "format": "{:%S}",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "interval": 1,
+        },
+        "group/clock": {
+            "orientation": "vertical",
+            "modules": ["clock", "clock#sec"],
+            "drawer": {
+                "transition-duration": 500,
+            },
+        },
+        "clock#date": {
+            "format": "{:%a, %b%d}",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "rotate": 90,
+        },
+        "battery": {
+            "states": {
+                "great": 95,
+                "good": 85,
+                "warning": 30,
+                "critical": 10,
+            },
+            "format": "{capacity:02}%",
+            "format-full": " \n{capacity:02}",
+            "format-charging": " \n{capacity:02}%",
+            "format-warning": " \n{capacity:02}%",
+            "format-critical": " \n{capacity:02}%",
+            "tooltip-format": "power: {capacity:02}%\ntime: {time}",
+            "interval": 3,
+            //"format-good": "", // An empty format will hide the module
+        },
+        "battery#bat2": {
+            "bat": "BAT2",
+        },
+        "cpu": {
+            "interval": 1,
+            "format": "{usage:02}%",
+            "states": {
+                "critical": 80,
+            },
+        },
+        "memory": {
+            "interval": 1,
+            "format": "{percentage:02}%",
+            "tooltip-format": "{used:0.1f}GiB used",
+            "states": {
+                "critical": 80,
+            },
+        },
+        "memory#swap": {
+            "interval": 1,
+            "format": "{swapPercentage:02}%",
+            "tooltip-format": "{swapUsed:0.1f}GiB used",
+            "states": {
+                "critical": 80,
+            },
+        },
+        "group/systeminfo": {
+            "orientation": "vertical",
+            "modules": ["cpu", "custom/space", "memory", "custom/space", "memory#swap"] 
+        },
+        "custom/yearp": {
+            "format": "{:.2}%",
+            "exec": "~/bin/yearprogress",
+            "tooltip-format": "year progress: {}%",
+            "interval": 180,
+        },
+        "custom/mediaprogress": {
+            "format": "{}",
+            "return-type": "json",
+            "max-length": 20,
+            "hide-empty-text": true,
+            "exec": "unbuffer ~/bin/mediaprogress 2> /dev/null",
+            "on-click": "playerctl play-pause",
+            "on-right-click": "sys-notif media",
+            "rotate": 90,
+        },
+        "hyprland/workspaces": {
+            "format": "{icon}",
+            "format-icons": {
+                "active": "#",
+                "default": "#"
+            }
+        },
+        "hyprland/language": {
+            "format-en": "en",
+            "format-ar": "ar",
+        },
+        "network": {
+            "format": "net",
+            "tooltip-format-ethernet": "eth: {ipaddr}/{cidr}",
+            "tooltip-format-wifi": "{essid}\n{ifname} via {gwaddr}",
+            "tooltip-format-linked": "{ifname} (No IP)",
+            "format-disconnected": "dis",
+            "format-disabled": "dis",
+            "tooltip-format-disconnected": "disconnected",
+            "tooltip-format-disabled": "disabled",
+            "interval": 3,
+        },
+        "custom/separator": {
+            "format": " | ",
+            "tooltip": false,
+            "rotate": 90,
+        },
+        "custom/space": {
+            "format": " ",
+            "tooltip": false,
+            "rotate": 90,
+        },
+        "custom/idleinhibit": {
+            "format": "{} | ",
+            "exec": "echo idle",
+            "exec-if": "pidof systemd-inhibit",
+            "rotate": 90,
+            "interval": 1,
+        },
+    },
+]

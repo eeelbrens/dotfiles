@@ -1,0 +1,5 @@
+/.config/spicetify/*
+!/.config/spicetify/Themes/
+/.config/spicetify/Themes/*
+!/.config/spicetify/Themes/text/
+/.zsh/plugins/*

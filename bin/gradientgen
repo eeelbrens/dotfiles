@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for((i = 0; i < 100; i++)); do
+echo ".modules-center #custom-mediaprogress.$i {
+    background-image: linear-gradient(to top, @mauve $i%, @base $i.1%);
+}
+"
+done

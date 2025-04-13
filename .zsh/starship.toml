@@ -1,0 +1,52 @@
+format = """$directory\
+$character"""
+
+right_format = """
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$python\
+$cmd_duration"""
+
+add_newline = true
+
+# basic formats
+[directory]
+truncation_length = 6
+truncation_symbol = '…/'
+truncate_to_repo = false
+read_only = ' r'
+style = "bold green"
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
+vimcmd_symbol = "[<](bold blue)"
+
+[cmd_duration]
+format = "[took $duration](italic) "
+
+# git
+[git_branch]
+symbol = ''
+style = "bold yellow"
+
+[git_commit]
+style = "italic yellow"
+
+[git_state]
+style = "bold yellow"
+
+[git_status]
+format = '[$ahead_behind$all_status]($style) '
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+style = "bold italic yellow"
+
+[python]
+format = "[$virtualenv]($style) "
