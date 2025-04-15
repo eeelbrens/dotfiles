@@ -71,6 +71,6 @@ personal daily-driver dotfiles (with vertical bar) based on [`hyprland`](https:/
 | item | description |
 | :---: | --- |
 | [catppuccin](https://github.com/catppuccin/catppuccin) | theme <br>(flavor: Mocha Mauve)  |
-| [wallpaper](.config/hypr/wallpaper.png) | [original wallpaper (pixiv)](https://www.pixiv.net/en/artworks/95800226)<br>modified using [`gowall`](https://github.com/Achno/gowall?tab=readme-ov-file) |
+| [wallpaper](.config/hypr/wallpaper.png) | [original wallpaper (pixiv)](https://www.pixiv.net/en/artworks/116092926)<br>modified using [`gowall`](https://github.com/Achno/gowall?tab=readme-ov-file) |
 | [Fira Code](https://github.com/tonsky/FiraCode) | font |
 | [cbonsai](https://gitlab.com/jallbrit/cbonsai) | bonsai terminal illustration |
