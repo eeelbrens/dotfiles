@@ -61,22 +61,17 @@
         },
         "battery": {
             "states": {
-                "great": 95,
-                "good": 85,
                 "warning": 30,
                 "critical": 10,
             },
             "format": "{capacity:02}%",
-            "format-full": " \n{capacity:02}",
+            "format-plugged": " \n{capacity:02}%",
             "format-charging": " \n{capacity:02}%",
             "format-warning": " \n{capacity:02}%",
             "format-critical": " \n{capacity:02}%",
             "tooltip-format": "power: {capacity:02}%\ntime: {time}",
             "interval": 3,
             //"format-good": "", // An empty format will hide the module
-        },
-        "battery#bat2": {
-            "bat": "BAT2",
         },
         "cpu": {
             "interval": 1,

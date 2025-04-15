@@ -480,7 +480,7 @@ window#waybar {
     color: @mauve;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging {
     color: @green;
 }
 

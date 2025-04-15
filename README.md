@@ -47,7 +47,7 @@ personal daily-driver dotfiles (with vertical bar) based on [`hyprland`](https:/
 | [`battery-alert`](bin/battery-alert) | notifications at different battery levels<br>(dependent on a [`cron`](https://en.wikipedia.org/wiki/Cron)job, from [Eric Murphy's dotfiles' scripts](https://github.com/ericmurphyxyz/dotfiles/tree/master/.local/bin)) |
 | [`battery-charging`](bin/battery-charging) | notifications when connecting and disconnecting charger<br>(dependent on [`udev`](https://en.wikipedia.org/wiki/Udev) rules, from [Eric Murphy's dotfiles' scripts](https://github.com/ericmurphyxyz/dotfiles/tree/master/.local/bin)) |
 | [`color-picker`](bin/color-picker) | notification showing current color after executing `hyprpicker`<br>(modifies [`mako` config file](.config/mako/config) directly) |
-| [`grimblast`](bin/grimblast) | [grimblast for hyprland](https://github.com/hyprwm/contrib/tree/main/grimblast) |
+| [`grimblast`](bin/grimblast) | [grimshot (easy screenshots) for hyprland](https://github.com/hyprwm/contrib/tree/main/grimblast) |
 | [`musicstring`](bin/musicstring) | json for playerctl enabled pseudo-progress bar in waybar <br>(css hack, adapting [this script I found](https://web.archive.org/web/20201111230445/https://ix.io/1RBN) from [this Reddit comment](https://www.reddit.com/r/unixporn/comments/cq5gm5/comment/ewu2fkb/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)) |
 | [`gradientgen`](bin/gradientgen) | css style generator (in [`waybar`](~/.config/waybar)'s [`style.css`](.config/waybar/style.css)) for the [`musicstring`](bin/musicstring) script |
 | [`summaryclock`](bin/summaryclock) | notification sent every hour on ##:00 <br> (dependent on a [`cron`](https://en.wikipedia.org/wiki/Cron)job) |
